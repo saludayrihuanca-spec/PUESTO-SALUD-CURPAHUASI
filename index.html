@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>Puesto de Salud Curpahuasi</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+</head>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Puesto de Salud Curpahuasi</title>
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f4fbfe;
+            color: #16445c;
+        }
+
+        /* =========================================
+           ENCABEZADO
+        ========================================= */
+
+        header {
+            width: 100%;
+            padding: 25px 7%;
+            background: rgba(255, 255, 255, 0.97);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
+
+            position: relative;
+            z-index: 10;
+        }
+
+        .encabezado {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            text-align: left;
+        }
+
+        /* LOGO */
+
+        .logo {
+            width: 75px;
+            height: 75px;
+
+            border-radius: 50%;
+
+            background: linear-gradient(
+                135deg,
+                #0069a6,
+                #27b9e6
+            );
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            color: white;
+            font-size: 42px;
+            font-weight: bold;
+
+            box-shadow: 0 5px 15px rgba(0, 100, 160, 0.25);
+        }
+
+        .titulo h1 {
+            color: #006ba6;
+            font-size: 30px;
+            margin-bottom: 7px;
+        }
+
+        .titulo p {
+            color: #5d7c89;
+            font-size: 16px;
+        }
+
+
+        /* =========================================
+           PORTADA
+        ========================================= */
+
+        .portada {
+
+            min-height: 600px;
+
+            background-image:
+                linear-gradient(
+                    rgba(0, 90, 140, 0.55),
+                    rgba(0, 130, 180, 0.50)
+                ),
+                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=85");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 60px 20px;
+        }
+
+        .portada-contenido {
+            max-width: 900px;
+            color: white;
+        }
+
+        .portada-contenido h2 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 3px 8px rgba(0,0,0,0.3);
+        }
+
+        .portada-contenido p {
+            font-size: 21px;
+            line-height: 1.6;
+            margin-bottom: 45px;
+        }
+
+
+        /* =========================================
+           BOTÓN ATENCIÓN INTEGRAL
+        ========================================= */
+
+        .boton-atencion {
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            min-width: 430px;
+
+            padding: 22px 45px;
+
+            background: white;
+
+            color: #006ba6;
+
+            border-radius: 50px;
+
+            font-size: 22px;
+            font-weight: bold;
+
+            text-decoration: none;
+
+            box-shadow:
+                0 10px 30px rgba(0,0,0,0.25);
+
+            transition: all 0.3s ease;
+        }
+
+        .boton-atencion:hover {
+
+            transform: translateY(-5px) scale(1.02);
+
+            background: #e8faff;
+
+            box-shadow:
+                0 15px 35px rgba(0,0,0,0.30);
+        }
+
+
+        /* =========================================
+           INDICADORES
+        ========================================= */
+
+        .indicadores {
+
+            padding: 70px 8%;
+
+            background: white;
+        }
+
+        .titulo-seccion {
+
+            text-align: center;
+
+            margin-bottom: 50px;
+        }
+
+        .titulo-seccion h2 {
+
+            font-size: 36px;
+
+            color: #006ba6;
+
+            margin-bottom: 10px;
+        }
+
+        .titulo-seccion p {
+
+            color: #708993;
+
+            font-size: 17px;
+        }
+
+
+        /* =========================================
+           CONTENEDOR INDICADORES
+        ========================================= */
+
+        .contenedor-indicadores {
+
+            max-width: 950px;
+
+            margin: auto;
+
+            display: flex;
+
+            flex-direction: column;
+
+            gap: 30px;
+        }
+
+
+        /* =========================================
+           INDICADOR
+        ========================================= */
+
+        .indicador {
+
+            background: #f5fbfd;
+
+            padding: 25px 30px;
+
+            border-radius: 15px;
+
+            border-left: 6px solid #009bd0;
+
+            box-shadow:
+                0 5px 18px rgba(0, 100, 140, 0.08);
+        }
+
+        .indicador-cabecera {
+
+            display: flex;
+
+            justify-content: space-between;
+
+            align-items: center;
+
+            margin-bottom: 13px;
+        }
+
+        .indicador-cabecera h3 {
+
+            color: #15536c;
+
+            font-size: 18px;
+        }
+
+        .porcentaje {
+
+            color: #008cc3;
+
+            font-size: 19px;
+
+            font-weight: bold;
+        }
+
+
+        /* =========================================
+           BARRA
+        ========================================= */
+
+        .barra {
+
+            width: 100%;
+
+            height: 18px;
+
+            background: #dcecf2;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .progreso {
+
+            height: 100%;
+
+            border-radius: 20px;
+
+            background: linear-gradient(
+                90deg,
+                #0075b2,
+                #28c0e7
+            );
+
+            width: 0;
+
+            animation: cargarBarra 1.5s ease forwards;
+        }
+
+
+        /* ANIMACIONES */
+
+        .p75 {
+            animation-delay: 0.2s;
+            --progreso: 75%;
+        }
+
+        .p58 {
+            animation-delay: 0.4s;
+            --progreso: 58%;
+        }
+
+        .p68 {
+            animation-delay: 0.6s;
+            --progreso: 68%;
+        }
+
+        .p82 {
+            animation-delay: 0.8s;
+            --progreso: 82%;
+        }
+
+        .p64 {
+            animation-delay: 1s;
+            --progreso: 64%;
+        }
+
+        @keyframes cargarBarra {
+
+            from {
+                width: 0;
+            }
+
+            to {
+                width: var(--progreso);
+            }
+        }
+
+
+        /* =========================================
+           PIE DE PÁGINA
+        ========================================= */
+
+        footer {
+
+            background: #005d8c;
+
+            color: white;
+
+            text-align: center;
+
+            padding: 30px 20px;
+        }
+
+        footer h3 {
+
+            font-size: 20px;
+
+            margin-bottom: 8px;
+        }
+
+        footer p {
+
+            font-size: 14px;
+
+            opacity: 0.9;
+        }
+
+
+        /* =========================================
+           RESPONSIVE
+        ========================================= */
+
+        @media (max-width: 700px) {
+
+            header {
+                padding: 20px;
+            }
+
+            .encabezado {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .titulo h1 {
+                font-size: 24px;
+            }
+
+            .titulo p {
+                font-size: 14px;
+            }
+
+            .portada {
+                min-height: 550px;
+            }
+
+            .portada-contenido h2 {
+                font-size: 34px;
+            }
+
+            .portada-contenido p {
+                font-size: 17px;
+            }
+
+            .boton-atencion {
+
+                min-width: auto;
+
+                width: 100%;
+
+                max-width: 380px;
+
+                font-size: 18px;
+
+                padding: 19px 25px;
+            }
+
+            .indicadores {
+                padding: 50px 20px;
+            }
+
+            .titulo-seccion h2 {
+                font-size: 30px;
+            }
+
+            .indicador {
+                padding: 20px;
+            }
+
+            .indicador-cabecera h3 {
+                font-size: 16px;
+            }
+
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+    <!-- =========================================
+         ENCABEZADO
+    ========================================= -->
+
+    <header>
+
+        <div class="encabezado">
+
+            <div class="logo">
+                +
+            </div>
+
+            <div class="titulo">
+
+                <h1>
+                    PUESTO DE SALUD CURPAHUASI
+                </h1>
+
+                <p>
+                    Cuidando la salud de nuestra comunidad
+                </p>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- =========================================
+         PORTADA
+    ========================================= -->
+
+    <section class="portada">
+
+        <div class="portada-contenido">
+
+            <h2>
+                Bienvenidos
+            </h2>
+
+            <p>
+                Trabajamos por una atención integral,
+                cercana y de calidad para nuestra comunidad.
+            </p>
+
+
+            <!-- BOTÓN PRINCIPAL -->
+
+            <a
+                href="atencion-integral.html"
+                class="boton-atencion"
+            >
+
+                ATENCIÓN INTEGRAL DE SALUD
+
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         INDICADORES
+    ========================================= -->
+
+    <section class="indicadores">
+
+        <div class="titulo-seccion">
+
+            <h2>
+                INDICADORES
+            </h2>
+
+            <p>
+                Atención integral por Curso de Vida
+            </p>
+
+        </div>
+
+
+        <div class="contenedor-indicadores">
+
+
+            <!-- NIÑOS -->
+
+            <div class="indicador">
+
+                <div class="indicador-cabecera">
+
+                    <h3>
+                        NIÑOS (0 - 11 AÑOS)
+                    </h3>
+
+                    <span class="porcentaje">
+                        75%
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="progreso p75"
+                        style="--progreso: 75%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADOLESCENTES -->
+
+            <div class="indicador">
+
+                <div class="indicador-cabecera">
+
+                    <h3>
+                        ADOLESCENTES (12 - 17 AÑOS)
+                    </h3>
+
+                    <span class="porcentaje">
+                        58%
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="progreso p58"
+                        style="--progreso: 58%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- JÓVENES -->
+
+            <div class="indicador">
+
+                <div class="indicador-cabecera">
+
+                    <h3>
+                        JÓVENES (18 - 29 AÑOS)
+                    </h3>
+
+                    <span class="porcentaje">
+                        68%
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="progreso p68"
+                        style="--progreso: 68%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADULTOS -->
+
+            <div class="indicador">
+
+                <div class="indicador-cabecera">
+
+                    <h3>
+                        ADULTOS (30 - 59 AÑOS)
+                    </h3>
+
+                    <span class="porcentaje">
+                        82%
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="progreso p82"
+                        style="--progreso: 82%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- ADULTO MAYOR -->
+
+            <div class="indicador">
+
+                <div class="indicador-cabecera">
+
+                    <h3>
+                        ADULTO MAYOR (59 A MÁS AÑOS)
+                    </h3>
+
+                    <span class="porcentaje">
+                        64%
+                    </span>
+
+                </div>
+
+                <div class="barra">
+
+                    <div
+                        class="progreso p64"
+                        style="--progreso: 64%;"
+                    ></div>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================================
+         PIE DE PÁGINA
+    ========================================= -->
+
+    <footer>
+
+        <h3>
+            Puesto de Salud Curpahuasi
+        </h3>
+
+        <p>
+            Salud al servicio de nuestra comunidad
+        </p>
+
+        <br>
+
+        <p>
+            © 2026 Puesto de Salud Curpahuasi
+        </p>
+
+    </footer>
+ <script src="script.js"></script>
+</body>
+</html>
