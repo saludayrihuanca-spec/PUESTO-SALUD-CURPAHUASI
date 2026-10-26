@@ -1,722 +1,147 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport"
-          content="width=device-width, initial-scale=1.0">
-
-    <title>Puesto de Salud Curpahuasi</title>
-
-    <link rel="stylesheet" href="estilos.css">
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Puesto de Salud Curpahuasi: atención integral, prevención e indicadores prioritarios de salud.">
+  <title>Puesto de Salud Curpahuasi</title>
+  <link rel="stylesheet" href="estilos.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 </head>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Puesto de Salud Curpahuasi</title>
-
-    <style>
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            background: #f4fbfe;
-            color: #16445c;
-        }
-
-        /* =========================================
-           ENCABEZADO
-        ========================================= */
-
-        header {
-            width: 100%;
-            padding: 25px 7%;
-            background: rgba(255, 255, 255, 0.97);
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.10);
-
-            position: relative;
-            z-index: 10;
-        }
-
-        .encabezado {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            text-align: left;
-        }
-
-        /* LOGO */
-
-        .logo {
-            width: 75px;
-            height: 75px;
-
-            border-radius: 50%;
-
-            background: linear-gradient(
-                135deg,
-                #0069a6,
-                #27b9e6
-            );
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            color: white;
-            font-size: 42px;
-            font-weight: bold;
-
-            box-shadow: 0 5px 15px rgba(0, 100, 160, 0.25);
-        }
-
-        .titulo h1 {
-            color: #006ba6;
-            font-size: 30px;
-            margin-bottom: 7px;
-        }
-
-        .titulo p {
-            color: #5d7c89;
-            font-size: 16px;
-        }
-
-
-        /* =========================================
-           PORTADA
-        ========================================= */
-
-        .portada {
-
-            min-height: 600px;
-
-            background-image:
-                linear-gradient(
-                    rgba(0, 90, 140, 0.55),
-                    rgba(0, 130, 180, 0.50)
-                ),
-                url("https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&w=2000&q=85");
-
-            background-size: cover;
-            background-position: center;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            text-align: center;
-
-            padding: 60px 20px;
-        }
-
-        .portada-contenido {
-            max-width: 900px;
-            color: white;
-        }
-
-        .portada-contenido h2 {
-            font-size: 48px;
-            margin-bottom: 20px;
-            text-shadow: 0 3px 8px rgba(0,0,0,0.3);
-        }
-
-        .portada-contenido p {
-            font-size: 21px;
-            line-height: 1.6;
-            margin-bottom: 45px;
-        }
-
-
-        /* =========================================
-           BOTÓN ATENCIÓN INTEGRAL
-        ========================================= */
-
-        .boton-atencion {
-
-            display: inline-flex;
-
-            align-items: center;
-            justify-content: center;
-
-            min-width: 430px;
-
-            padding: 22px 45px;
-
-            background: white;
-
-            color: #006ba6;
-
-            border-radius: 50px;
-
-            font-size: 22px;
-            font-weight: bold;
-
-            text-decoration: none;
-
-            box-shadow:
-                0 10px 30px rgba(0,0,0,0.25);
-
-            transition: all 0.3s ease;
-        }
-
-        .boton-atencion:hover {
-
-            transform: translateY(-5px) scale(1.02);
-
-            background: #e8faff;
-
-            box-shadow:
-                0 15px 35px rgba(0,0,0,0.30);
-        }
-
-
-        /* =========================================
-           INDICADORES
-        ========================================= */
-
-        .indicadores {
-
-            padding: 70px 8%;
-
-            background: white;
-        }
-
-        .titulo-seccion {
-
-            text-align: center;
-
-            margin-bottom: 50px;
-        }
-
-        .titulo-seccion h2 {
-
-            font-size: 36px;
-
-            color: #006ba6;
-
-            margin-bottom: 10px;
-        }
-
-        .titulo-seccion p {
-
-            color: #708993;
-
-            font-size: 17px;
-        }
-
-
-        /* =========================================
-           CONTENEDOR INDICADORES
-        ========================================= */
-
-        .contenedor-indicadores {
-
-            max-width: 950px;
-
-            margin: auto;
-
-            display: flex;
-
-            flex-direction: column;
-
-            gap: 30px;
-        }
-
-
-        /* =========================================
-           INDICADOR
-        ========================================= */
-
-        .indicador {
-
-            background: #f5fbfd;
-
-            padding: 25px 30px;
-
-            border-radius: 15px;
-
-            border-left: 6px solid #009bd0;
-
-            box-shadow:
-                0 5px 18px rgba(0, 100, 140, 0.08);
-        }
-
-        .indicador-cabecera {
-
-            display: flex;
-
-            justify-content: space-between;
-
-            align-items: center;
-
-            margin-bottom: 13px;
-        }
-
-        .indicador-cabecera h3 {
-
-            color: #15536c;
-
-            font-size: 18px;
-        }
-
-        .porcentaje {
-
-            color: #008cc3;
-
-            font-size: 19px;
-
-            font-weight: bold;
-        }
-
-
-        /* =========================================
-           BARRA
-        ========================================= */
-
-        .barra {
-
-            width: 100%;
-
-            height: 18px;
-
-            background: #dcecf2;
-
-            border-radius: 20px;
-
-            overflow: hidden;
-        }
-
-        .progreso {
-
-            height: 100%;
-
-            border-radius: 20px;
-
-            background: linear-gradient(
-                90deg,
-                #0075b2,
-                #28c0e7
-            );
-
-            width: 0;
-
-            animation: cargarBarra 1.5s ease forwards;
-        }
-
-
-        /* ANIMACIONES */
-
-        .p75 {
-            animation-delay: 0.2s;
-            --progreso: 75%;
-        }
-
-        .p58 {
-            animation-delay: 0.4s;
-            --progreso: 58%;
-        }
-
-        .p68 {
-            animation-delay: 0.6s;
-            --progreso: 68%;
-        }
-
-        .p82 {
-            animation-delay: 0.8s;
-            --progreso: 82%;
-        }
-
-        .p64 {
-            animation-delay: 1s;
-            --progreso: 64%;
-        }
-
-        @keyframes cargarBarra {
-
-            from {
-                width: 0;
-            }
-
-            to {
-                width: var(--progreso);
-            }
-        }
-
-
-        /* =========================================
-           PIE DE PÁGINA
-        ========================================= */
-
-        footer {
-
-            background: #005d8c;
-
-            color: white;
-
-            text-align: center;
-
-            padding: 30px 20px;
-        }
-
-        footer h3 {
-
-            font-size: 20px;
-
-            margin-bottom: 8px;
-        }
-
-        footer p {
-
-            font-size: 14px;
-
-            opacity: 0.9;
-        }
-
-
-        /* =========================================
-           RESPONSIVE
-        ========================================= */
-
-        @media (max-width: 700px) {
-
-            header {
-                padding: 20px;
-            }
-
-            .encabezado {
-                flex-direction: column;
-                text-align: center;
-            }
-
-            .titulo h1 {
-                font-size: 24px;
-            }
-
-            .titulo p {
-                font-size: 14px;
-            }
-
-            .portada {
-                min-height: 550px;
-            }
-
-            .portada-contenido h2 {
-                font-size: 34px;
-            }
-
-            .portada-contenido p {
-                font-size: 17px;
-            }
-
-            .boton-atencion {
-
-                min-width: auto;
-
-                width: 100%;
-
-                max-width: 380px;
-
-                font-size: 18px;
-
-                padding: 19px 25px;
-            }
-
-            .indicadores {
-                padding: 50px 20px;
-            }
-
-            .titulo-seccion h2 {
-                font-size: 30px;
-            }
-
-            .indicador {
-                padding: 20px;
-            }
-
-            .indicador-cabecera h3 {
-                font-size: 16px;
-            }
-
-        }
-
-    </style>
-</head>
-
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Puesto de Salud Curpahuasi, inicio">
+      <span class="brand-mark" aria-hidden="true">
+        <svg viewBox="0 0 64 64" role="img">
+          <path d="M8 28 32 7l24 21v27H8Z" fill="none" stroke="currentColor" stroke-width="5" stroke-linejoin="round"/>
+          <path d="M25 20h14v8h8v14h-8v8H25v-8h-8V28h8Z" fill="#078c58"/>
+          <circle cx="20" cy="48" r="4" fill="#078c58"/><circle cx="44" cy="48" r="4" fill="#078c58"/>
+          <path d="M20 60v-5c0-5 4-8 8-8m16 13v-5c0-5-4-8-8-8" fill="none" stroke="#078c58" stroke-width="4" stroke-linecap="round"/>
+        </svg>
+      </span>
+      <span class="brand-text"><span>Puesto de Salud</span><strong>CURPAHUASI</strong></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav" aria-label="Navegación principal">
+      <a class="nav-link active" href="#inicio">⌂ <span>Inicio</span></a>
+      <a class="nav-link" href="#atencion">♙ <span>Atención Integral</span></a>
+      <a class="nav-link" href="#cursos">♧ <span>Cursos de Vida</span></a>
+      <a class="nav-link" href="#familias">♧ <span>Familias y Personas</span></a>
+      <a class="nav-link" href="#indicadores">▥ <span>Indicadores</span></a>
+      <a class="nav-link" href="#contacto">✉ <span>Contacto</span></a>
+    </nav>
+  </header>
 
-
-    <!-- =========================================
-         ENCABEZADO
-    ========================================= -->
-
-    <header>
-
-        <div class="encabezado">
-
-            <div class="logo">
-                +
-            </div>
-
-            <div class="titulo">
-
-                <h1>
-                    PUESTO DE SALUD CURPAHUASI
-                </h1>
-
-                <p>
-                    Cuidando la salud de nuestra comunidad
-                </p>
-
-            </div>
-
-        </div>
-
-    </header>
-
-
-
-    <!-- =========================================
-         PORTADA
-    ========================================= -->
-
-    <section class="portada">
-
-        <div class="portada-contenido">
-
-            <h2>
-                Bienvenidos
-            </h2>
-
-            <p>
-                Trabajamos por una atención integral,
-                cercana y de calidad para nuestra comunidad.
-            </p>
-
-
-            <!-- BOTÓN PRINCIPAL -->
-
-            <a
-                href="atencion-integral.html"
-                class="boton-atencion"
-            >
-
-                ATENCIÓN INTEGRAL DE SALUD
-
-            </a>
-
-        </div>
-
+  <main>
+    <section class="hero" id="inicio">
+      <img class="hero-photo" src="imagenes/equipo-salud-curpahuasi.jpg" alt="Equipo de salud frente al puesto de salud en Curpahuasi">
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow">Juntos por una comunidad más sana</p>
+        <h1>Puesto de Salud<br><span>CURPAHUASI</span></h1>
+        <p class="hero-description">Brindamos atención integral, oportuna y de calidad a toda la población del distrito de Curpahuasi.</p>
+        <a class="button button-primary" href="#mision"><span aria-hidden="true">♥</span> Nuestra misión</a>
+      </div>
     </section>
 
+    <section class="services-section" id="indicadores">
+      <div class="section-heading">
+        <div class="pulse-icon" aria-hidden="true">⌁〰</div>
+        <h2>Nuestros principales servicios</h2>
+        <p>Trabajamos por el bienestar de todas las personas, en cada etapa de su vida.</p>
+      </div>
 
-
-    <!-- =========================================
-         INDICADORES
-    ========================================= -->
-
-    <section class="indicadores">
-
-        <div class="titulo-seccion">
-
-            <h2>
-                INDICADORES
-            </h2>
-
-            <p>
-                Atención integral por Curso de Vida
-            </p>
-
-        </div>
-
-
-        <div class="contenedor-indicadores">
-
-
-            <!-- NIÑOS -->
-
-            <div class="indicador">
-
-                <div class="indicador-cabecera">
-
-                    <h3>
-                        NIÑOS (0 - 11 AÑOS)
-                    </h3>
-
-                    <span class="porcentaje">
-                        75%
-                    </span>
-
-                </div>
-
-                <div class="barra">
-
-                    <div
-                        class="progreso p75"
-                        style="--progreso: 75%;"
-                    ></div>
-
-                </div>
-
+      <div class="service-grid">
+        <article class="service-card anemia-card" id="anemia">
+          <div class="anemia-top">
+            <img class="service-photo anemia-photo" src="imagenes/equipo-salud-curpahuasi.jpg" alt="Personal de salud en una actividad comunitaria">
+            <div class="round-icon red-icon" aria-hidden="true">☻</div>
+            <div class="service-copy">
+              <h3>Anemia y desnutrición</h3>
+              <p class="lead">En niños menores de 5 años y gestantes del distrito de Curpahuasi</p>
+              <p>Prevención, detección y tratamiento para un mejor crecimiento y desarrollo.</p>
+              <a class="button button-red" href="#anemia-info"><span>➜</span> Ver indicadores y resultados <span>→</span></a>
             </div>
-
-
-
-            <!-- ADOLESCENTES -->
-
-            <div class="indicador">
-
-                <div class="indicador-cabecera">
-
-                    <h3>
-                        ADOLESCENTES (12 - 17 AÑOS)
-                    </h3>
-
-                    <span class="porcentaje">
-                        58%
-                    </span>
-
-                </div>
-
-                <div class="barra">
-
-                    <div
-                        class="progreso p58"
-                        style="--progreso: 58%;"
-                    ></div>
-
-                </div>
-
+          </div>
+          <div class="population-strip" id="anemia-info">
+            <div class="population-item">
+              <span class="population-icon" aria-hidden="true">☻</span>
+              <div><strong>Niños menores de 5 años</strong><p>Seguimiento nutricional y suplementación.</p></div>
             </div>
-
-
-
-            <!-- JÓVENES -->
-
-            <div class="indicador">
-
-                <div class="indicador-cabecera">
-
-                    <h3>
-                        JÓVENES (18 - 29 AÑOS)
-                    </h3>
-
-                    <span class="porcentaje">
-                        68%
-                    </span>
-
-                </div>
-
-                <div class="barra">
-
-                    <div
-                        class="progreso p68"
-                        style="--progreso: 68%;"
-                    ></div>
-
-                </div>
-
+            <div class="population-item">
+              <span class="population-icon" aria-hidden="true">♡</span>
+              <div><strong>Gestantes</strong><p>Control prenatal, suplementación y consejería nutricional.</p></div>
             </div>
+          </div>
+          <p class="data-note">Los indicadores numéricos de anemia y desnutrición se incorporarán cuando se ingresen las metas y los avances oficiales.</p>
+        </article>
 
-
-
-            <!-- ADULTOS -->
-
-            <div class="indicador">
-
-                <div class="indicador-cabecera">
-
-                    <h3>
-                        ADULTOS (30 - 59 AÑOS)
-                    </h3>
-
-                    <span class="porcentaje">
-                        82%
-                    </span>
-
+        <article class="service-card oral-card" id="salud-bucal">
+          <div class="oral-top">
+            <img class="service-photo oral-photo" src="imagenes/salud-bucal-ninos.jpg" alt="Niños participando en una campaña de promoción de salud bucal">
+            <div class="oral-content">
+              <div class="oral-heading">
+                <div class="round-icon blue-icon" aria-hidden="true">♧</div>
+                <div><h3>Indicador de<br><strong>SALUD BUCAL</strong></h3><p class="lead">En niños de 3 a 5 años</p></div>
+              </div>
+              <div class="metric-grid">
+                <div class="metric-box metric-goal green">
+                  <span class="metric-symbol">◎</span><span class="metric-label">Meta</span>
+                  <strong>50</strong><small>niños con evaluación<br>oral completa</small>
                 </div>
-
-                <div class="barra">
-
-                    <div
-                        class="progreso p82"
-                        style="--progreso: 82%;"
-                    ></div>
-
+                <div class="metric-box metric-done">
+                  <span class="metric-symbol">✓</span><span class="metric-label">Realizado</span>
+                  <strong>53</strong><small>evaluaciones</small>
                 </div>
-
+                <div class="metric-box metric-goal purple">
+                  <span class="metric-symbol">◎</span><span class="metric-label">Meta</span>
+                  <strong>23</strong><small>niños con paquete preventivo<br>completo</small>
+                </div>
+                <div class="metric-box metric-done">
+                  <span class="metric-symbol">✓</span><span class="metric-label">Realizado</span>
+                  <strong>15</strong><small>paquetes preventivos</small>
+                </div>
+              </div>
             </div>
+          </div>
 
-
-
-            <!-- ADULTO MAYOR -->
-
-            <div class="indicador">
-
-                <div class="indicador-cabecera">
-
-                    <h3>
-                        ADULTO MAYOR (59 A MÁS AÑOS)
-                    </h3>
-
-                    <span class="porcentaje">
-                        64%
-                    </span>
-
-                </div>
-
-                <div class="barra">
-
-                    <div
-                        class="progreso p64"
-                        style="--progreso: 64%;"
-                    ></div>
-
-                </div>
-
+          <div class="progress-list">
+            <div class="progress-item">
+              <div class="progress-label"><span>Evaluación oral completa</span><strong>53 / 50 · 106%</strong></div>
+              <div class="progress-track" role="progressbar" aria-label="Avance de evaluación oral completa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="100"><span class="progress-fill progress-green" style="width:100%"></span></div>
+              <p class="progress-foot green-text">Meta superada por 3 evaluaciones</p>
             </div>
-
-
-        </div>
-
+            <div class="progress-item">
+              <div class="progress-label"><span>Paquete preventivo completo</span><strong>15 / 23 · 65,2%</strong></div>
+              <div class="progress-track" role="progressbar" aria-label="Avance de paquete preventivo completo" aria-valuemin="0" aria-valuemax="100" aria-valuenow="65.2"><span class="progress-fill progress-blue" style="width:65.2%"></span></div>
+              <p class="progress-foot blue-text">Faltan 8 niños para alcanzar la meta</p>
+            </div>
+          </div>
+          <a class="button button-blue oral-button" href="#resultados-bucales"><span aria-hidden="true">♧</span> Ver detalle de resultados <span>→</span></a>
+          <div class="sr-only" id="resultados-bucales">Evaluación oral completa: meta 50, realizado 53, avance 106%. Paquete preventivo completo: meta 23, realizado 15, avance 65,2%.</div>
+        </article>
+      </div>
     </section>
 
+    <section class="quick-links" aria-label="Accesos del sitio">
+      <article id="atencion"><span class="quick-icon">＋</span><div><h3>Atención Integral</h3><p>Atención centrada en las necesidades de cada persona.</p></div><a href="#cursos" aria-label="Ir a cursos de vida">→</a></article>
+      <article id="cursos"><span class="quick-icon">♡</span><div><h3>Cursos de Vida</h3><p>Niños, adolescentes, jóvenes, adultos y adultos mayores.</p></div><a href="#familias" aria-label="Ver familias y personas">→</a></article>
+      <article id="familias"><span class="quick-icon">♧</span><div><h3>Familias y Personas</h3><p>Organización del seguimiento integral de la población.</p></div><a href="#contacto" aria-label="Ir a contacto">→</a></article>
+    </section>
 
+    <section class="mission-section" id="mision">
+      <div class="mission-heart" aria-hidden="true">♥</div>
+      <div><p class="eyebrow">Nuestra misión</p><h2>Tu salud, nuestra prioridad</h2><p>Promovemos la prevención, el cuidado y el bienestar de las familias de Curpahuasi, con compromiso y cercanía a nuestra comunidad.</p></div>
+    </section>
+  </main>
 
-    <!-- =========================================
-         PIE DE PÁGINA
-    ========================================= -->
-
-    <footer>
-
-        <h3>
-            Puesto de Salud Curpahuasi
-        </h3>
-
-        <p>
-            Salud al servicio de nuestra comunidad
-        </p>
-
-        <br>
-
-        <p>
-            © 2026 Puesto de Salud Curpahuasi
-        </p>
-
-    </footer>
- <script src="script.js"></script>
+  <footer class="site-footer" id="contacto">
+    <div class="footer-brand"><span aria-hidden="true">✚</span><strong>Puesto de Salud Curpahuasi</strong></div>
+    <p>Tu salud, nuestra prioridad</p>
+    <div class="footer-location">⌖ <span>Curpahuasi · Distrito de Curpahuasi</span></div>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
